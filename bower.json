@@ -1,0 +1,17 @@
+{
+  "name": "adapt-talk",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nachocinalli/adapt-talk.git"
+  },
+  "framework": ">=5.14.0",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nachocinalli/adapt-talk",
+  "issues": "https://github.com/nachocinalli/adapt-talk/issues",
+  "component": "talk",
+  "description": "A talk component",
+  "main": "/js/adapt-talk.js",
+  "displayName": "Talk",
+  "keywords": ["adapt-plugin", "adapt-component"],
+  "license": "GPLv3"
+}

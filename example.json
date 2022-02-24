@@ -1,0 +1,54 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "talk",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Talk Items",
+  "displayTitle": "Talk Items",
+  "body": "This is optional body text.",
+  "instruction": "This is the instruction text.",
+  "_characters": [
+    {
+      "name": "Talk text",
+      "_graphic": {
+        "alt": "",
+        "src": ""
+      }
+    },
+    {
+      "name": "Talk text",
+      "_graphic": {
+        "alt": "",
+        "src": ""
+      }
+    }
+  ],
+  "_items": [
+    {
+      "_character": 1,
+      "text": "Talk text",
+      "_graphic": {
+        "alt": "",
+        "src": ""
+      }
+    },
+    {
+      "_character": 2,
+      "text": "Talk text",
+      "_graphic": {
+        "alt": "",
+        "src": ""
+      }
+    },
+    {
+      "_character": 1,
+      "text": "Talk text",
+      "_graphic": {
+        "alt": "",
+        "src": ""
+      }
+    }
+  ]
+}

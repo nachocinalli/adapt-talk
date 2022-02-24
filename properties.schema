@@ -1,0 +1,156 @@
+{
+	"type": "object",
+	"$schema": "http://json-schema.org/draft-04/schema",
+	"id": "http://jsonschema.net",
+	"$ref": "http://localhost/plugins/content/component/model.schema",
+	"globals": {
+		"ariaRegion": {
+			"type": "string",
+			"required": true,
+			"default": "This component is a talk.",
+			"inputType": "Text",
+			"validators": [],
+			"translatable": true
+		}
+	},
+	"properties": {
+		"_supportedLayout": {
+			"type": "string",
+			"required": true,
+			"enum": ["full-width", "half-width", "both"],
+			"default": "half-width",
+			"editorOnly": true
+		},
+		"instruction": {
+			"type": "string",
+			"required": false,
+			"default": "",
+			"inputType": "Text",
+			"validators": [],
+			"help": "This is the instruction text",
+			"translatable": true
+		},
+		"_characters": {
+			"type": "array",
+			"required": true,
+			"title": "Talk characters",
+			"items": {
+				"type": "object",
+				"required": true,
+				"properties": {
+
+					"name": {
+						"type": "string",
+						"required": false,
+						"inputType": "Text",
+						"title": "Name",
+						"default": "",
+						"validators": [],
+						"help": "This is the character's name",
+						"translatable": true
+					},
+
+					"_graphic": {
+						"type": "object",
+						"required": false,
+						"title": "Image",
+						"properties": {
+							"src": {
+								"type": "string",
+								"required": false,
+								"default": "",
+								"inputType": "Asset:image",
+								"validators": [],
+								"help": "The image for the character"
+							},
+							"alt": {
+								"type": "string",
+								"required": false,
+								"default": "",
+								"inputType": "Text",
+								"validators": [],
+								"help": "Alternative text for this image",
+								"translatable": true
+							}
+						}
+					},
+
+					"_classes": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Classes",
+						"inputType": "Text",
+						"validators": [],
+						"help": "Classes that are applied to the character"
+					}
+				}
+			}
+		},
+		"_items": {
+			"type": "array",
+			"required": true,
+			"title": "Talk messages",
+			"items": {
+				"type": "object",
+				"required": true,
+				"properties": {
+					"_character": {
+						"type": "number",
+						"required": true,
+						"default": 1,
+						"title": "Character",
+						"inputType": "Number",
+						"validators": [],
+						"help": "Enter the number that corresponds with the character. Start count from 1"
+					},
+					"text": {
+						"type": "string",
+						"required": false,
+						"inputType": "TextArea",
+						"title": "Text",
+						"default": "",
+						"validators": [],
+						"help": "This is the item text",
+						"translatable": true
+					},
+
+					"_graphic": {
+						"type": "object",
+						"required": false,
+						"title": "Image",
+						"properties": {
+							"src": {
+								"type": "string",
+								"required": false,
+								"default": "",
+								"inputType": "Asset:image",
+								"validators": [],
+								"help": "The image for the item"
+							},
+							"alt": {
+								"type": "string",
+								"required": false,
+								"default": "",
+								"inputType": "Text",
+								"validators": [],
+								"help": "Alternative text for this image",
+								"translatable": true
+							}
+						}
+					},
+
+					"_classes": {
+						"type": "string",
+						"required": false,
+						"default": "",
+						"title": "Classes",
+						"inputType": "Text",
+						"validators": [],
+						"help": "Classes that are applied to the item"
+					}
+				}
+			}
+		}
+	}
+}

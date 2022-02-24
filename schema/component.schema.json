@@ -1,0 +1,140 @@
+{
+  "$anchor": "talk-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "properties": {
+        "_supportedLayout": {
+          "type": "string",
+          "title": "Supported layout",
+          "default": "full-width",
+          "enum": ["full-width", "half-width", "both"],
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "instruction": {
+          "type": "string",
+          "title": "Instruction",
+          "default": "",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_characters": {
+          "type": "array",
+          "title": "Talk characters",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": {
+                "type": "string",
+                "title": "Character name",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+
+              "_graphic": {
+                "type": "object",
+                "title": "Graphic",
+                "default": {},
+                "properties": {
+                  "alt": {
+                    "type": "string",
+                    "title": "Alternative text",
+                    "description": "A description of the image",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "src": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Image",
+                    "description": "The image for the character",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  }
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Custom classes",
+                "description": "Custom classes",
+                "default": ""
+              }
+            }
+          }
+        },
+        "_items": {
+          "type": "array",
+          "title": "Talk messages",
+          "items": {
+            "type": "object",
+            "properties": {
+              "_character": {
+                "type": "number",
+                "title": "Character",
+                "default": 1,
+                "_adapt": {
+                  "translatable": false
+                }
+              },
+              "text": {
+                "type": "string",
+                "title": "Item text",
+                "description": "This is the item text",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                },
+                "_backboneForms": "TextArea"
+              },
+              "_graphic": {
+                "type": "object",
+                "title": "Graphic",
+                "default": {},
+                "properties": {
+                  "alt": {
+                    "type": "string",
+                    "title": "Alternative text",
+                    "description": "A description of the image",
+                    "default": "",
+                    "_adapt": {
+                      "translatable": true
+                    }
+                  },
+                  "src": {
+                    "type": "string",
+                    "isObjectId": true,
+                    "title": "Image",
+                    "description": "The image for the item",
+                    "_backboneForms": {
+                      "type": "Asset",
+                      "media": "image"
+                    }
+                  }
+                }
+              },
+              "_classes": {
+                "type": "string",
+                "title": "Custom classes",
+                "description": "Custom classes",
+                "default": ""
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
