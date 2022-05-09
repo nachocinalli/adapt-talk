@@ -8,9 +8,6 @@ The attributes listed below are used in components.json and are properly formatt
 
 ```
 .talk {
-  &__chat:not(.is-visited) {
-    opacity: 0;
-  }
   &__chat-container {
     align-items: flex-start;
   }
@@ -34,7 +31,7 @@ The attributes listed below are used in components.json and are properly formatt
     background-color: @item-color;
     color: @item-color-inverted;
     border-radius: 1rem;
-    padding: 1.75rem;
+    padding: 1rem;
     width: 100%;
     &::after {
       content: "";
@@ -49,6 +46,7 @@ The attributes listed below are used in components.json and are properly formatt
     }
   }
   &__chat {
+    opacity: 0;
     transform: translateY(100px);
     transition: all 2000ms cubic-bezier(0.23, 1, 0.32, 1),
       visibility 0s linear 0s;
