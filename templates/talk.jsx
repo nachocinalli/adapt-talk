@@ -61,20 +61,24 @@ export default function Talk(props) {
       <templates.header {...props} />
       <div className='component__widget talk__widget'>
 
-        <div className='talk__container-items' role='list'>
+        <div className='talk__container-items' role='feed'>
 
           {_items.map(({ _character, _graphic, text, _classes }, _index) => (
             <div key={_index}
-
+              role='article'
               className={classes([
                 'talk__chat',
                 `talk__chat-character-${_character._index}`,
                 !hasObserver && 'is-visited',
                 _classes
               ])}
+              aria-posinset={_index + 1}
+              tabIndex="0"
+              aria-labelledby={`talk__chat-container-${_character._index}`}
+              aria-setsize={el.querySelectorAll('.talk__chat.is-visited').length + 1}
               data-index={_index}>
               <div className={classes(['talk__chat-status'])}></div>
-              <div className="talk__chat-container">
+              <div className="talk__chat-container" id={`talk__chat-container-${_character._index}`}>
                 <div className={classes(['talk__chat__character', _character._classes])}>
                   {_character?._graphic && (
                     <templates.image
