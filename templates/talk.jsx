@@ -74,11 +74,11 @@ export default function Talk(props) {
               ])}
               aria-posinset={_index + 1}
               tabIndex="0"
-              aria-labelledby={`talk__chat-container-${_character._index}`}
+              aria-labelledby={`talk__chat-container-${_index}`}
               aria-setsize={el.querySelectorAll('.talk__chat.is-visited').length + 1}
               data-index={_index}>
               <div className={classes(['talk__chat-status'])}></div>
-              <div className="talk__chat-container" id={`talk__chat-container-${_character._index}`}>
+              <div className="talk__chat-container" id={`talk__chat-container-${_index}`}>
                 <div className={classes(['talk__chat__character', _character._classes])}>
                   {_character?._graphic && (
                     <templates.image
